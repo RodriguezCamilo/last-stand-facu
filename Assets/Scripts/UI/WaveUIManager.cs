@@ -8,8 +8,8 @@ public class WaveUIManager : MonoBehaviour
 
     [SerializeField] private TMP_Text waveText;
     [SerializeField] private CanvasGroup canvasGroup;
-    [SerializeField] private float displayTime = 2f;
-    [SerializeField] private float fadeDuration = 0.5f;
+    [SerializeField] private float displayTime = 3f;
+    [SerializeField] private float fadeDuration = 1.0f;
 
     private void Awake()
     {

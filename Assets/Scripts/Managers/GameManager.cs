@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     
     private IEnumerator RespawnRoutine(Player player)
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         player.transform.position = playerSpawnPosition;
         player.gameObject.SetActive(true);
