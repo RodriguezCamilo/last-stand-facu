@@ -208,6 +208,7 @@ public class Player : Character, IDamageable
     public void ResetPlayer()
     {
         animator.SetBool("Death", false);
+        animator.Play("Idle");
         currentHealth = maxHealth;
         isDead = false;
         m_playerRigidbody.isKinematic = false;
