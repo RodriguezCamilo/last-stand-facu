@@ -11,6 +11,7 @@ public class Player : Character, IDamageable
     [SerializeField] private float dashForce = 50f;
     [SerializeField] private float dashCooldown = 1f;
     [SerializeField] private float dashDuration = 0.2f;
+    [SerializeField] private AudioClip dashClip;
     private bool isDashing = false;
     private bool canDash = true;
 
@@ -113,7 +114,6 @@ public class Player : Character, IDamageable
 
     private void Dash()
     {
-
         // Checkeo que el personaje ya se este moviendo hacia algun lado
         Vector3 dashDirection = new Vector3(m_horz, 0f, m_vert).normalized;
 
@@ -127,6 +127,10 @@ public class Player : Character, IDamageable
         m_playerRigidbody.AddForce(dashDirection * dashForce, ForceMode.Impulse);
 
         isDashing = true;
+        if (dashClip != null && shootAudioSource != null)
+        {
+            shootAudioSource.PlayOneShot(dashClip);
+        }
 
         // Cooldown
         canDash = false;

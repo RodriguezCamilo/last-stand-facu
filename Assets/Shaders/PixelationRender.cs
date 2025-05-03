@@ -33,7 +33,6 @@ public class PixelationRendererFeature : ScriptableRendererFeature
             CommandBuffer cmd = CommandBufferPool.Get("PixelationPass");
             RenderingUtils.ReAllocateIfNeeded(ref tempTex, src.rt.descriptor);
 
-            // 3) Copiar → efecto → devolver
             Blit(cmd, src, tempTex);
             cmd.SetGlobalTexture("_BlitTexture", tempTex);
             Blit(cmd, tempTex, src, material);
