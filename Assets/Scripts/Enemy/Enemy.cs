@@ -8,9 +8,7 @@ public class Enemy : Character, IDamageable
     [SerializeField] protected float speed = 3f;
     [SerializeField] private float damage = 10f;
     [SerializeField] private float attackCooldown = 1.5f;
-
-    // --- NUEVO ---
-    [SerializeField] private float turnSpeed = 10f;   // Velocidad de giro
+    [SerializeField] private float turnSpeed = 10f;
 
     private bool canAttack = true;
 

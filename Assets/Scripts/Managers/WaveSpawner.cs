@@ -11,7 +11,7 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private float timeBetweenWaves = 5f;
 
-    [SerializeField] private LayerMask enemyLayer;   // ▶ NUEVO: capa para chequear solapamiento
+    [SerializeField] private LayerMask enemyLayer;
 
     [Header("Wave Settings")]
     [SerializeField] private int enemiesToSpawn = 3;
